@@ -1,0 +1,6 @@
+data_configs:
+  data_directory: data/
+  vectorstore_directory: chromadb/
+  create_db: False
+  filetype: text
+  is_dir: True

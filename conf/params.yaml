@@ -1,0 +1,10 @@
+text_splitter_params:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+retriever_params:
+  k: 3
+
+chain_params:
+  chain_type: stuff
+  return_source: True
