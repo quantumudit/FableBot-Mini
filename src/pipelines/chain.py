@@ -117,23 +117,23 @@ if __name__ == "__main__":
         query = input("Question (type 'exit' to quit): ")
         if query.lower() == "exit":
             break
+
+        return_source = input("View Sources (True/False): ")
+        # Extract LLM response
+        response = get_llm_response(query, chain=qa_chain, return_source_docs=True)
+
+        # Extract answers & sources from LLM response
+        ANSWER = wrap_text(response.get("response"))
+        sources = response.get("source_docs")
+
+        # Print the response and sources
+        if return_source.lower() == "true":
+            print("\n\nAnswer:")
+            print(ANSWER)
+            print("\nSources:")
+            print("\n".join(sources))
+            print("\n")
         else:
-            return_source = input("View Sources (True/False): ")
-            # Extract LLM response
-            response = get_llm_response(query, chain=qa_chain, return_source_docs=True)
-
-            # Extract answers & sources from LLM response
-            answer = wrap_text(response.get("response"))
-            sources = response.get("source_docs")
-
-            # Print the response and sources
-            if return_source.lower() == "true":
-                print("\n\nAnswer:")
-                print(answer)
-                print("\nSources:")
-                print("\n".join(sources))
-                print("\n")
-            else:
-                print("\n\nAnswer:")
-                print(answer)
-                print("\n")
+            print("\n\nAnswer:")
+            print(ANSWER)
+            print("\n")
