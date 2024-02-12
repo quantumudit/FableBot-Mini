@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "textbot"
+name = "FableBot-Mini"
 version = "0.1.0"
-description = "The project is about creating a chatbot that will leverage LLM to respond to queries related to the provided text files"
+description = "The project is about creating a chatbot that will leverage LLM to respond to queries related to the provided text file contents."
 authors = ["Udit Kumar Chatterjee <quantumudit@gmail.com>"]
 license = "NC-SA"
 readme = "README.md"

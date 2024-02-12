@@ -1,1 +1,1 @@
-# Textbot
+# FableBot-Mini
